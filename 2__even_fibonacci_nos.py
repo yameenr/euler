@@ -10,14 +10,15 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 def main():
     fib = [1,2]
     i = 0
+    num = 4000000 
     sum = 0
-    while( i < 4000000):
+    while( i < num):
        i = fib[len(fib) - 1] + fib[len(fib) - 2]
        fib.append(i)
     for item in fib:
         if (item % 2 == 0):
             sum += item
-    print ("sum of all even fibonacci numbers less than 4million is {:d}".format(sum))
+    print ("Sum of all even fibonacci numbers less than 4 million is {:d}".format(sum))
 
 if __name__ == '__main__':
     main()
